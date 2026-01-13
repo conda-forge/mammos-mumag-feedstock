@@ -38,12 +38,17 @@ requirements:
     - scipy
     - tqdm
     - urllib3
+    - __linux  # [linux]
+    - __win  # [win]
+    - __osx  # [osx]
+    - jax  # [linux]
+    - esys-escript  # [linux]
 
 test:
   imports:
     - mammos_mumag
   commands:
-    - pip check
+    - pip check  # [linux]
     - unv2fly --help
   requires:
     - python {{ python_min }}
