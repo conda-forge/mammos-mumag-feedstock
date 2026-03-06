@@ -1,5 +1,5 @@
 {% set name = "mammos-mumag" %}
-{% set version = "0.10.1" %}
+{% set version = "0.11.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mammos_mumag-{{ version }}.tar.gz
-  sha256: 4ae75d7e9fea5aa6f8d5b3fb52631dadffb343683f56b889a84fea2f2fd681d7
+  sha256: baffd7fe0a99103f2fc81a02e8cc566e52db520b8c71f2eb6f9cd6edeb259654
 
 build:
   entry_points:
     - unv2fly = mammos_mumag.cli:convert_mesh
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
